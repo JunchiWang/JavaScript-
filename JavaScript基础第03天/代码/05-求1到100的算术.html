@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // for循环可以重复执行某些代码 代码可以有些许变化
+        // for循环 因为有了计数器的存在 我们可以重复执行某些操作 比如做一些算术运算
+        // 求 1 到 100 的累加和 
+        // 1.  1 + 2 + 3 + 4.... + 100 
+        // 2.  这个相加的数值 正好等于 我们的计数器 
+        // 3.  我们还需要一个变量sum   用来存储相加之后的结果 
+        var sum = 0; // sum 结果变量
+        for (var i = 1; i <= 100; i++) {
+            // sum = sum + i;
+            sum += i;
+        }
+        console.log(sum); // 5050
+
+        // 求 1 到 100 之间所有偶数的和
+        // 能够被2整除的就是偶数 先把偶数筛选出来  进行相加 
+        var evenSum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 === 0) {
+                evenSum = evenSum + i;
+            }
+        }
+        console.log(evenSum); // 2550
+
+        // 求1-100之间所有能被3整除的数字的和
+        var thSum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 === 0) {
+                thSum += i;
+            }
+        }
+        console.log(thSum); // 1683
+
+        // 求1-100之间所有数的平均值
+        // 平均值 用 总的和 除以个数 就是平均值 
+        var total = 0; // 总和
+        var average = 0; // 平均值
+        for (var i = 1; i <= 100; i++) {
+            total += i;
+        }
+        console.log(total);
+        average = total / 100;
+        console.log(average); // 50.5
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
