@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // this 的指向问题  一般情况下 this 指向的是它的调用者
+
+        // 1. this 在函数中的指向  window  因为window 调用了这个函数 
+        function fn() {
+            console.log(this);
+
+        }
+        fn(); // window.fn()  window.alert(11);
+        // 2. this 在对象的指向   指向的是 obj  对象  还是执行的 调用者 
+        var obj = {
+            name: 'andy',
+            sayHi: function() {
+                console.log(this);
+                that = this;
+            }
+        }
+        obj.sayHi();
+        console.log(that === obj);
+        // 3. this 在构造函数中的指向    ff  调用者 
+        function Fn() {
+            console.log(this);
+            that = this;
+        }
+        var ff = new Fn();
+        console.log(that === ff);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

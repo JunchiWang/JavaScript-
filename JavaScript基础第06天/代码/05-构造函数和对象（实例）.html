@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 1. 定义构造函数 ：我们把对象一些相同的属性和方法进行了抽取，然后进行了函数封装，目的是为了重复使用这些相同的代码。 明星   泛指 某一大类的意思  构造函数类似于其他语言里面的类（class） 
+        function Stars(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function() {
+                console.log('唱歌');
+
+            }
+        }
+        // 2. 使用构造函数  调用构造函数 我们需要 使用 new
+        // 刘德华 就是 特指 某一个明星 （对象）  new Stars()  通过我们刚才的构造函数 产生一个新的对象
+        // 所以说 new 可以让一个 泛指的 转变成了一个特指的 对象 (实例化)  ldh  就是一个 对象 （对象实例）
+        var ldh = new Stars('刘德华', 18, '男');
+        // 3. new Array()    Array() 泛指的数组 数组太多了
+        var arr = new Array(1, 2);
+        console.log(arr); // [1,2]
+        // 4. new Object()
+        var obj = new Object();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

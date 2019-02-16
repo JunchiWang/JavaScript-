@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 倒计时案例    现在的时间 7.6 12点    结束的时间  7.8  8点结束
+        // 1. 用结束的时间 减去  现在的时间 就是剩余的时间 
+        // 2. 我们不能用时间 直接相减 （ 时分秒） 
+        // 3. 核心思路  毫秒数  用结束时间的总毫秒数（大）  -  现在时间总的毫秒数 （小）  == 剩余时间总的毫秒数
+        // 4. 把剩余时间总的毫秒数  转换为年月日 时分秒
+        function getLastTimes(time) {
+            // 1. 求 结束时间总的毫秒数  endTime
+            var endTime = +new Date(time);
+            // console.log(endTime); // 时间更大
+
+            // 2. 现在时间总的毫秒数
+            var nowTime = +new Date();
+            // console.log(nowTime); // 时间更小
+            // 3. 求 剩余的总的毫秒数  我们把毫秒数 转换为剩余的总的秒数 
+            var lastTime = (endTime - nowTime) / 1000;
+            console.log(lastTime);
+            // 4. 把剩余的总的秒数 转换为 时分秒年月日 
+            // d = parseInt(总秒数 / 60 / 60 / 24); // 计算天数
+            d = parseInt(lastTime / 60 / 60 / 24); // 计算天数
+            d = d < 10 ? '0' + d : d;
+            // h = parseInt(总秒数 / 60 / 60 % 24) // 计算小时
+            h = parseInt(lastTime / 60 / 60 % 24) // 计算小时
+            h = h < 10 ? '0' + h : h;
+            // m = parseInt(总秒数 / 60 % 60); // 计算分数
+            m = parseInt(lastTime / 60 % 60); // 计算分数
+            m = m < 10 ? '0' + m : m;
+
+            // s = parseInt(总秒数 % 60); // 计算当前秒数
+            s = parseInt(lastTime % 60); // 计算当前秒数
+            s = s < 10 ? '0' + s : s;
+
+            return '距离结束还剩下 ' + d + '天 ' + h + '时 ' + m + '分 ' + s + '秒'
+
+        }
+
+        console.log(getLastTimes('2018-7-8 08:08:08'));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

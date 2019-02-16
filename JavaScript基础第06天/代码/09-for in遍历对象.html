@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var obj = {
+                name: 'andy',
+                age: 45,
+                sex: '男'
+            }
+            // console.log(obj.name);
+            // console.log(obj.age);
+            // console.log(obj.sex);
+
+        // 遍历对象 for in 
+        // 1. for in 语法规范
+        // for(变量 in 对象) {
+        //     变量 输出的是 属性名 
+        //     对象[变量] 输出的是 属性值
+        // }
+        // 2. 代码演示 
+        // for (var k in obj) { // 一般情况下 变量 我们写 k  有时候写 key 
+        //     console.log(k); // name  age  sex 
+        //     console.log(obj[k]);  andy  45 男
+
+        // }
+        for (var k in obj) {
+            console.log('属性名是' + k + '值是' + obj[k]);
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

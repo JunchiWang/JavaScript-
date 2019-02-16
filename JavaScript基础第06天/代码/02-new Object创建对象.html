@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 1. 利用 new Object 创建对象
+        // var obj = new Object(); 创建了一个空对象 类似于   var obj = {};
+        // 要求创建刘德华对象 姓名刘德华 年龄18 性别男  打招呼
+        var obj = new Object();
+        obj.name = '刘德华';
+        obj.age = 18;
+        obj.sex = '男';
+        obj.sayHi = function() {
+                console.log('hi');
+
+            }
+            // (1) 创建了一个空对象  追加属性数据的方式   对象名.属性名  = 值 
+            // (2) 创建了一个空对象  追加方法数据的方式   对象名.方法名  = function(){}
+            // 2. 使用我们对象的属性和方法 跟前面一致
+        console.log(obj.name);
+        console.log(obj.age);
+        console.log(obj['sex']);
+        obj.sayHi();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

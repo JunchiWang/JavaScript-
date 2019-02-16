@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var date = new Date();
+        console.log(date);
+        console.log(date.getFullYear()); // 2018 得到当前日期的年份
+        console.log(date.getMonth() + 1); // 6 得到的月份比实际的小1  月份是从0开始  0~11
+        console.log(date.getDate()); // 6  几号
+        console.log(date.getDay()); // 5    0 星期天  1星期一   2是星期二 ....
+
+        // 封装我们自己的年月日函数
+        function getNowDate() {
+            var date = new Date();
+            var arr = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']; // 第一个一定是星晴天
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var dates = date.getDate();
+            var day = date.getDay();
+            return year + '年' + month + '月' + dates + '日 ' + arr[day];
+        }
+        console.log(getNowDate());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

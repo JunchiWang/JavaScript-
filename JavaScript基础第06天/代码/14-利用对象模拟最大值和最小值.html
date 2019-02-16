@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 利用对象 模拟 max  和  min
+        console.log(Math.max(1, 2, 3));
+        console.log(Math.min(1, 2, 3));
+        var myMath = {
+            PI: 3.141592653,
+            max: function() {
+                var max = arguments[0];
+                for (var i = 0; i < arguments.length; i++) {
+                    if (max < arguments[i]) {
+                        max = arguments[i]
+                    }
+                }
+                return max;
+            },
+            min: function() {
+                var min = arguments[0];
+                for (var i = 0; i < arguments.length; i++) {
+                    if (min > arguments[i]) {
+                        min = arguments[i]
+                    }
+                }
+                return min;
+            }
+        }
+
+        console.log(myMath.max(1, 2, 3));
+        console.log(myMath.min(1, 2, 3));
+        console.log(myMath.PI);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 输入时间一个小注意点
+        var date = new Date();
+        console.log(date);
+        // 1 .我们输入的是字符串
+        var date1 = new Date('2018-7-6');
+        console.log(date1);
+        var date2 = new Date('2018/7/6');
+        console.log(date2);
+        // 2. 我们还可以输入 数值型 
+        var date3 = new Date(2018, 7, 6);
+        console.log(date3); // 返回的 不是 7月份 而是 8月份
+        // 所以我们如果输入的是数值型， 实际的月份要 小1个月才行
+        var date4 = new Date(2018, 6, 6); // 输入的是 6月 返回的才是  7月
+        console.log(date4); //
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
