@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 1. 连接（合并）数组  concat   
+        // 语法 新数组  =  旧数组.concat(值/数组)  括号里面可以是 值 也可以是 数组
+        var arr1 = [1, 2, 3];
+        var arr2 = arr1.concat('andy');
+        console.log(arr2);
+        var arr3 = ['a', 'b', 'c'];
+        var arr4 = arr1.concat(arr3); // 可以把多个数组合并连接为一个新的数组
+        console.log(arr4);
+        console.log(arr1);
+
+        // 总结  它不会修改原数组   返回合并完毕之后的新数组
+        // 2. splice() 插入、删除或替换数组的元素
+        // (1) 删除某几个元素   数组.splice(起始位置, [删除的个数])
+        var arr = ['red', 'green', 'blue', 'pink'];
+        // 起始位置 从 0 开始计算    删除的个数 是删除几个的意思 
+        arr.splice(2, 2); // 从索引号2的位置开始  删除 2个元素 
+        console.log(arr);
+        var arr1 = ['red', 'green', 'blue', 'pink']; // 我们要把green 和blue 删掉
+        arr1.splice(1, 2); // 从索引号1的位置开始  删除 2个元素 
+        console.log(arr1);
+        var arr2 = ['red', 'green', 'blue', 'pink']; // 我们要把green 和blue  pink 删掉
+        arr2.splice(1); // 只写了一个起始位置不写删除的个数，默认从起始位置删除到数组的最后面
+        console.log(arr2);
+        // (2) 删除某几个元素 后的返回值 （跟我们前面学的 pop  shift 返回的是被删除的元素）
+        var arr3 = ['red', 'green', 'blue', 'pink'];
+        console.log(arr3.splice(0, 2)); // 删除了 red  green  返回值就是  red green
+        console.log(arr3); // 原数组剩下 blue  pink
+        // (3) 插入或者 替换数组中的元素   数组.splice(起始位置, [删除的个数], [元素1, 元素2...])
+        var arr4 = ['red', 'green', 'blue', 'pink'];
+        // arr4.splice(0, 0, 'hotpink');
+        // arr4.splice(0, 0, 'hotpink', 'lightpink');
+        // 在 索引号2 的位置 前面 插入 某几个元素 
+        arr4.splice(2, 0, 'hotpink', 'lightpink');
+        console.log(arr4);
+        // (4) 替换数组中的元素
+        var arr5 = ['red', 'green', 'blue', 'pink'];
+        // 我们把 pink 颜色替换为 skyblue  （删掉 pink 替换为 skyblue）
+        arr5.splice(3, 1, 'skyblue');
+        console.log(arr5);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

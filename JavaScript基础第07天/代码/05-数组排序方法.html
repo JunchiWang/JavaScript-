@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 数组排序的方法
+        // 1. 反转数组 
+        // 要求，翻转数组，将数组   ['red', 'green', 'blue', 'pink', 'purple'] 的内容 反过来存放。
+        var arr = ['red', 'green', 'blue', 'pink', 'purple'];
+        // arr.reverse(); // 反转数组
+        console.log(arr.reverse()); // 返回的是新数组
+
+        console.log(arr);
+
+        // 2. 数组升序（降序) 排序 (冒泡)
+        var arr1 = [5, 4, 3, 2, 1];
+        arr1.sort();
+        console.log(arr1);
+        var arr2 = [9, 11, 4, 23, 6, 1];
+        arr2.sort();
+        console.log(arr2);
+        // 我们进行 升序（降序) 排序 (冒泡) 公式写法 
+        var arr3 = [9, 11, 4, 23, 6, 1];
+        arr3.sort(function(a, b) { // 升序公式
+            return a - b;
+        })
+        console.log(arr3);
+        arr3.sort(function(a, b) { // 降序公式
+            return b - a;
+        })
+        console.log(arr3);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

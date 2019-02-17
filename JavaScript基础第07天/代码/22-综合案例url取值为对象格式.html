@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 把url 网址 'http://www.itheima.com/login?name=zs&age=18';  
+        //  ? 后面的数据转换为对象 { name: zs,  age: 18}
+        // 案例的目的 如果我们第二个页面能够使用这个数据  我们就实现了2个页面之间传递数据
+        // 思路分析 ：  name=zs&age=18     ---->  { name: zs,  age: 18}
+        // 1.  name=zs&age=18    -->    name=zs        age=18
+        // 2.  name=zs     name    zs    split()
+        function params(url) {
+            // 1. 我们要得到  name=zs&age=18
+            var arr = url.split('?'); // split 分割字符串 返回的是数组
+            // console.log(arr);
+            var params = arr[1]; // name=zs&age=18
+            // console.log(params);
+            // 2. 我们继续切割  name=zs&age=18  想要得到   name=zs    age=18
+            var arr1 = params.split('&'); //  ["name=zs", "age=18"]
+            // console.log(arr1); 
+            // 3. 因为arr1 里面有多个元素， 都要分别切割，所以我们需要遍历循环
+            var o = {}; // 把分割完毕的 属性和 值 追加到对象里面
+            for (var i = 0; i < arr1.length; i++) {
+                // console.log(arr1[i]);
+                var newArr = arr1[i].split('=');
+                console.log(newArr); //  newArr  里面存储的是  ["name", "zs"]
+                // 我们想要name属性  newArr[0]   我们想要 zs 属性值  newArr[1] 
+                // o.name = zs 
+                o[newArr[0]] = newArr[1];
+            }
+
+            return o;
+        }
+
+        console.log(params('http://www.itheima.com/login?name=zs&age=18'));
+    </script>
+</head>
+
+<body>
+    <form action="demo.html" method="get">
+        用户名: <input type="text" name='username'> <br /> 年龄: <input type="text" name='age'> <br /> 密码: <input type="password" name='pwd'> <br/>
+        <input type="submit" value="提交">
+    </form>
+</body>
+
+</html>

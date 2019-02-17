@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 字符串特性--不可变性 
+        var str = 'andy';
+        str = 'red';
+        console.log(str);
+        // 我们看到了str变量发生了变化 实际是 地址发生了变化  但是原来的字符串空间是一直存在的。
+
+        // 如果我们大量拼接字符串 就会有性能问题 比较耗费内存资源
+        for (var i = 0; i < 1000000; i++) {
+            str += i;
+        }
+        console.log(str);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

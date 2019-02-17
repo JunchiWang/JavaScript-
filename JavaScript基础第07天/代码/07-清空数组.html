@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 清空数组的方式
+        // 1. 直接赋值一个空数组就可以清空数组( 最常用的一种方式 )
+        var arr = [1, 2, 3, 4, 5];
+        console.log(arr);
+        arr = [];
+        console.log(arr);
+        // 2. 修改数组的长度来清空数组
+        var arr = [1, 2, 3, 4, 5];
+        console.log(arr);
+        arr.length = 0;
+        console.log(arr);
+        // 3. 利用splice 删除数组里面的元素
+        var arr = [1, 2, 3, 4, 5];
+        console.log(arr);
+        arr.splice(0);
+        console.log(arr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

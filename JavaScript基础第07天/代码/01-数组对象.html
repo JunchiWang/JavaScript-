@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 数组内置对象
+        // 1. 创建数组的方式 2中方法  
+        // (1) 数组字面量  []; 实际开发中，我们字面量用的最多
+        var arr = [1, 2, 3];
+        console.log(arr[0]);
+        // (2) 利用数组的构造函数创建数组 
+        // 如果括号里面为空  则说明创建了一个空数组  类似于var arr = [];
+        var arr = new Array();
+        // 括号里面 只有一个值 3  代表的是数组长度为 3  里面的元素为空 
+        var arr1 = new Array(3);
+        console.log(arr1);
+        //括号里面跟多个值   这是创建了一个 [1,2,3] 的数组 
+        var arr2 = new Array(1, 2, 3);
+        console.log(arr2);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

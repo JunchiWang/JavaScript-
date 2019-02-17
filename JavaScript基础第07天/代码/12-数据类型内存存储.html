@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 数据类型  ：  1. 简单数据类型  2. 复杂数据类型
+        // 1. 简单数据类型（值类型）  number  string  boolean  undefined  null（空对象）
+        var timer = null;
+        console.log(typeof timer); // 返回的数据类型是  object  是历史遗留的一个bug
+        // 我们以后有个变量，我们不知道将来是什么数据类型或者 给什么值
+        var o = null; // 空的
+        console.log(undefined + 1);
+        console.log(null + 1);
+        // 简单数据类型存储到  栈里面
+        var num1 = 10;
+        var num2 = num1;
+        num1 = 20;
+        console.log(num1, num2);
+        // 简单数据类型 里面存储的是 值  他们之间不会相互影响 
+        // 2. 复杂数据类型 （引用数据类型） 我们new出来的对象 （系统对象，内置对象） Array Object Date
+        // 复杂数据类型存放到堆里面
+        function Stars(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        var star = new Stars('刘德华', 18);
+        // star 变量里面其实存放的是 地址  （十六进制来表示 0xaabbcc）
+        var star1 = star; // star 里面存放的是地址 这里 是吧 star的地址给了 star1
+        console.log(star1.name); // 刘德华
+        star.name = '张学友'; // 问 star1 会变吗？
+        console.log(star1.name); // 张学友 变化了
+        // 复杂数据类型里面存储的是 地址   同一个地址里面的对象发生了变化， 他们之间会相互影响
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

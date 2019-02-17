@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // ['c', 'a', 'z', 'a', 'x', 'a', 'x', 'c', 'b']; 取消重复的元素 数组去重 （for循环）
+        // 把旧数组里面 不重复的元素选取出来放到新数组中   重复的元素之保留一个 放到新数组中 数组去重
+        var arr = ['c', 'a', 'z', 'a', 'x', 'a', 'x', 'c', 'b'];
+        var newArr = []; // 新数组
+        for (var i = 0; i < arr.length; i++) { // 遍历的是旧数组
+            // 判断条件 我们去查询 --新数组-- 如果旧数组里面的一个元素在新数组里面没有出现过，我们就添加 否则不添加 
+            if (newArr.indexOf(arr[i]) === -1) {
+                newArr.push(arr[i]);
+            }
+        }
+        console.log(newArr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

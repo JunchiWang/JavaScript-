@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 写一个函数 要求：一个数组 [5,2,99,101,67,77] 中的最大数值
+        function getArrMax(arr) {
+            // if (arr instanceof Array) {
+            if (Array.isArray(arr)) {
+                var max = arr[0]; // max 存默认数组的第一个元素
+                for (var i = 1; i < arr.length; i++) {
+                    if (max < arr[i]) {
+                        max = arr[i];
+                    }
+                }
+                return max;
+            } else {
+                alert('请输入数组的格式');
+                return;
+            }
+        }
+        console.log(getArrMax([5, 2, 99, 101, 67, 77]));
+        console.log(getArrMax([1, 66, 3, 99]));
+        console.log(getArrMax(1, 2, 3));
+        // 判断对象是否属于数组
+        // 1. instanceof 运算符  判断 对象是否属于数组
+        var arr = [];
+        var obj = {}; // 对象
+        console.log(arr instanceof Array); // true
+        console.log(obj instanceof Array); // false
+        // 2. Array.isArray(对象);  HTML5新方法  低版本浏览器不支持 
+        console.log(Array.isArray(arr)); // true
+        console.log(Array.isArray(obj)); // false
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var arr = ['red', 'green', 'blue', 'pink', 'blue'];
+        // console.log(arr.indexOf('blue')); // 2  只能返回查询到的第一个元素的位置
+        // 可以设置查询的起始位置   数组.indexOf(要查询的元素, 起始位置)
+        // 起始位置默认的是从 0开始  
+        // console.log(arr.indexOf('blue', 3)); // 从第3号开始往右找目标元素
+        // 怎么样可以 查询出所有的 目标元素的索引号呢  我们想到了循环 for(计数)  while  do while
+        // 判断条件  只要我们查询的结果不是 -1  就说明我们能找到元素，我们则继续循环
+        // 我们此时用while 来做
+        var index = arr.indexOf('blue'); //  2 记录第一个元素的位置
+        while (index !== -1) {
+            console.log(index); // 先输出 
+            index = arr.indexOf('blue', index + 1);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

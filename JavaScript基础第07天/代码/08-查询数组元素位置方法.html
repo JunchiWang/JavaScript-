@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 查询数组元素在数组中的位置  indexOf()   重点  数组.indexOf(要查询的元素);
+        var arr = ['red', 'green', 'blue', 'pink'];
+        console.log(arr.indexOf('blue')); // 2  返回 blue 再 arr 中的索引号  从左往右
+        console.log(arr.indexOf('hotpink')); // -1
+        var arr = ['red', 'green', 'blue', 'pink', 'blue'];
+        console.log(arr.indexOf('blue')); // 2  只能返回查询到的第一个元素的位置 
+        // 查询数组元素在数组中的位置  lastIndexOf()   重点  数组.lastIndexOf(要查询的元素);
+        var arr = ['red', 'green', 'blue', 'pink', 'blue'];
+        console.log(arr.lastIndexOf('blue')); // 4 从右往左查询
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 根据 位置（索引号） 返回 字符
+        var str = 'andy';
+        // 1. charAt(index) index 索引号  但是一次只能查找一个 (用的最多的，需要重点记忆)
+        // console.log(str.charAt(2)); // d
+        // 遍历字符串跟遍历数组一样的
+        for (var i = 0; i < str.length; i++) {
+            console.log(str.charAt(i));
+        }
+        // 2. charCodeAt(index)  返回的是 当前字符的 ASCII 码
+        console.log(str.charCodeAt(0)); // a   返回的是 a 的ASCII值
+        // 以后我们经常用这个 方法 判断 用户按了那个键盘的键
+        // 3. str[index] 类似于数组的方法    HTML5，IE8+支持 和charAt()等效
+        // console.log(str);
+        // var s = new String('andy');
+        // console.log(s);
+        // console.log(str[0]);
+        for (var i = 0; i < str.length; i++) {
+            console.log(str[i]);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

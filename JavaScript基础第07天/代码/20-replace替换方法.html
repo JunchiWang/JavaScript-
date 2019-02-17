@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //replace() 方法用于在字符串中用一些字符替换另一些字符 一次只能替换一个
+        // 语法格式  replace(被替换的字符, 替换的字符)
+        var str = 'andy';
+        console.log(str.replace('a', 'b'));
+
+        // 把字符串'abcoefoxyozzopp'中所有的 o 替换成 !
+        var str = 'abcoefoxyozzopp';
+        while (str.indexOf('o') !== -1) {
+            str = str.replace('o', '!'); // abc!ef!xyozzopp
+        }
+        console.log(str);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
